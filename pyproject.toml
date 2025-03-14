@@ -4,9 +4,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pygdl"
-version = "1.0.3"
+version = "1.0.4"
 description = "A python based downloader for github release files."
-requires-python = ">=3.13"
+requires-python = ">=3.8"
 dependencies = ['tqdm', 'argpi', 'requests']
 readme = {file = "README.md", content-type = "text/markdown"}
 license = { file = "LICENSE" }
