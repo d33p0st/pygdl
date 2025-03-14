@@ -68,7 +68,7 @@ def download(
         unit='iB',
         unit_scale=True,
         unit_divisor=blocksize,
-        bar_format='{l_bar}{bar}| {n_fmt}/{total_fmt}',
+        bar_format='{l_bar}{bar}| {n_fmt}/{total_fmt} [{elapsed}]',
         ncols=90
     ) as tqdmbar:
         

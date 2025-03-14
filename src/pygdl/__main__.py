@@ -30,9 +30,12 @@ arguments.orchestrate
 
 def main():
     try:
-        download(config.file, config.git.split('/')[0], config.git.split('/')[1], config.release, config.outpath)
-    except Exception:
-        pass
+        status, ext = download(config.file, config.git.split('/')[0], config.git.split('/')[1], config.release, config.outpath)
+    except Exception as e:
+        raise RuntimeError(e)
+    
+    if not status:
+        raise RuntimeError(ext)
 
 
 if __name__.startswith('__main__'):
